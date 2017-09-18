@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
 import Video from 'react-native-video';
+import Camera from 'react-native-camera';
 // import { Constants, Components } from 'expo';
 // import { Video } from 'expo';
 
@@ -11,11 +12,18 @@ let videoDimensions = width - 40
 export default class App extends React.Component {
   constructor(props){
     super(props)
+    this.state = {
+      cam : false
+    }
   }
 
-  render() {
-    return (
-      <View style={styles.container}>
+  showCam = () => {
+    this.setState({cam : !this.state.cam})
+  }
+
+  getInner = () => {
+    if(!this.state.cam){
+      return(
         <ScrollView horizontal={true} pagingEnabled={true}>
           <View style={styles.miniWrpr}>
             <View style={styles.videoContainer}>
@@ -31,6 +39,7 @@ export default class App extends React.Component {
               />
             </View>
             <Text style={styles.userName}>John Doe</Text>
+            <TouchableOpacity onPress={()=>this.showCam()}><Text style={{color: '#666666' }}>Show Cam</Text></TouchableOpacity>
           </View>
           <View style={styles.miniWrpr}>
             <View style={styles.videoContainer}>
@@ -63,6 +72,18 @@ export default class App extends React.Component {
             <Text style={styles.userName}>Jim Doe</Text>
           </View>
         </ScrollView>
+      )
+    }else{
+      return(
+        <View style={styles.camWrapper}></View>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        {this.getInner()}
       </View>
     );
   }
@@ -75,6 +96,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start',
+  },
+  camWrapper:{
+    width: width,
+    height: height,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'red'
   },
   miniWrpr:{
     padding: 20,
