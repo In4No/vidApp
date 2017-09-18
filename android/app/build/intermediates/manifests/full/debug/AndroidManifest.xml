@@ -23,7 +23,7 @@
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name="com.vidapp.MainApplication"

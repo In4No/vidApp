@@ -21,7 +21,7 @@ ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:6:5-67
 		ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:7:5-77
-MERGED from [com.facebook.react:react-native:0.47.2] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.47.2] /Users/inkoniq/.android/build-cache/00dc8a6db3d21fdb738c6b73e8fa6cab3fa3b3bb/output/AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-permission#android.permission.RECORD_AUDIO
@@ -42,20 +42,20 @@ ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:11:5-8
 		ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:11:22-78
 uses-sdk
 ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:13:5-15:41
-MERGED from [vidApp:react-native-video:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-video/unspecified/AndroidManifest.xml:7:5-9:41
-MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.yqritc/android-scalablevideoview/1.0.4/AndroidManifest.xml:8:5-10:41
-MERGED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.47.2] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
-MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/AndroidManifest.xml:14:5-16:41
-MERGED from [com.facebook.fresco:fresco:1.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:2:3-70
+MERGED from [vidApp:react-native-video:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-video/android/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [com.yqritc:android-scalablevideoview:1.0.4] /Users/inkoniq/.android/build-cache/7bc7d375702084f7668574ae89c1b5917a43aee5/output/AndroidManifest.xml:8:5-10:41
+MERGED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.47.2] /Users/inkoniq/.android/build-cache/00dc8a6db3d21fdb738c6b73e8fa6cab3fa3b3bb/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/inkoniq/.android/build-cache/7c08f976c7f479a7d63cc8b51e39b7f1a043e50a/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] /Users/inkoniq/.android/build-cache/9d812f23912fe34aca552b2fa7706f2a4d12605f/output/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/inkoniq/.android/build-cache/7d63adc6fdae4b7d2ed2c9e05f8b5f43c1d61c87/output/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fresco:fresco:1.0.1] /Users/inkoniq/.android/build-cache/f311dfd378374e213d673aece7af042d286e8938/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.0.1] /Users/inkoniq/.android/build-cache/938f0dced27328b66b2105be836d85d9bfdec596/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/inkoniq/.android/build-cache/ee2f9ddb336429ab937429c80f08f0c9f479413a/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.0.1] /Users/inkoniq/.android/build-cache/c8e86ac2c11d60abfc1cfac03b105fad1e4cbedf/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.0.1] /Users/inkoniq/.android/build-cache/095de5a354c004bbab5de5270cbadf1487dab860/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.0.1] /Users/inkoniq/.android/build-cache/6f7d65f690edfe700b75d4dd874aeda5d80e69e6/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/inkoniq/.android/build-cache/e7d07ce56823807b86911bd51d864f0af9a4a606/output/AndroidManifest.xml:2:3-70
 	android:targetSdkVersion
 		ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:15:9-38
 		INJECTED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml
@@ -66,11 +66,11 @@ MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/inkoniq/vidApp/android
 		INJECTED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml
 application
 ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:17:5-34:19
-MERGED from [com.facebook.react:react-native:0.47.2] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.47.2/AndroidManifest.xml:13:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:3:3-17
-MERGED from [org.webkit:android-jsc:r174650] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/org.webkit/android-jsc/r174650/AndroidManifest.xml:2:3-17
+MERGED from [com.facebook.react:react-native:0.47.2] /Users/inkoniq/.android/build-cache/00dc8a6db3d21fdb738c6b73e8fa6cab3fa3b3bb/output/AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/inkoniq/.android/build-cache/7c08f976c7f479a7d63cc8b51e39b7f1a043e50a/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] /Users/inkoniq/.android/build-cache/9d812f23912fe34aca552b2fa7706f2a4d12605f/output/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/inkoniq/.android/build-cache/e7d07ce56823807b86911bd51d864f0af9a4a606/output/AndroidManifest.xml:3:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/inkoniq/.android/build-cache/f282008d20d295a0480471d4ee8a96a472f17c60/output/AndroidManifest.xml:2:3-17
 	android:label
 		ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:20:7-39
 	android:allowBackup
@@ -106,20 +106,20 @@ ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:33:7-8
 	android:name
 		ADDED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:33:17-81
 uses-permission#android.permission.CAMERA
-ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:11:5-65
+ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:11:5-65
 	android:name
-		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:11:22-62
+		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:11:22-62
 uses-feature#android.hardware.camera
-ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:13:5-15:36
+ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:13:5-15:36
 	android:required
-		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:15:9-33
+		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:15:9-33
 	android:name
-		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:14:9-47
+		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:14:9-47
 uses-feature#android.hardware.camera.autofocus
-ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:16:5-18:36
+ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:16:5-18:36
 	android:required
-		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:18:9-33
+		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:18:9-33
 	android:name
-		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/android/app/build/intermediates/exploded-aar/vidApp/react-native-camera/unspecified/AndroidManifest.xml:17:9-57
-android:uses-permission#android.permission.READ_PHONE_STATE
+		ADDED from [vidApp:react-native-camera:unspecified] /Users/inkoniq/vidApp/node_modules/react-native-camera/android/build/intermediates/bundles/default/AndroidManifest.xml:17:9-57
+uses-permission#android.permission.READ_PHONE_STATE
 IMPLIED from /Users/inkoniq/vidApp/android/app/src/main/AndroidManifest.xml:1:1-36:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4

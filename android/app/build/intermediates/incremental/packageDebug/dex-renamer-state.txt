@@ -1,4 +1,7 @@
-#Mon Sep 18 15:33:38 IST 2017
-base.0=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Mon Sep 18 18:13:51 IST 2017
+base.0=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e2c63d8fabd1f85f5ddf65f881a417ed97ef96c5
+renamed.1=classes2.dex
 renamed.0=classes.dex
-file.0=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.1=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0244da6ae64a28feb6e4d2e0390bc2f52d486651/classes.dex
+base.1=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_0244da6ae64a28feb6e4d2e0390bc2f52d486651
+file.0=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_e2c63d8fabd1f85f5ddf65f881a417ed97ef96c5/classes.dex
