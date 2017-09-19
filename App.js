@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, TextInput } from 'react-native';
 import Video from 'react-native-video';
 import Camera from 'react-native-camera';
 // import { Constants, Components } from 'expo';
@@ -16,7 +16,8 @@ export default class App extends React.Component {
     this.state = {
       cam : false,
       captureOn : false,
-      capturing : false
+      capturing : false,
+      text : 'Enter Message'
     }
   }
 
@@ -65,55 +66,41 @@ export default class App extends React.Component {
     // run upload function
   }
 
+  sendMessage = () => {
+    console.log("will send message")
+  }
+
+
   getInner = () => {
     if(!this.state.cam){
       return(
         <ScrollView horizontal={true} pagingEnabled={true}>
           <View style={styles.miniWrpr}>
-            <View style={styles.videoContainer}>
-              <Video
-                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                rate={1.0}
-                volume={1.0}
-                muted={false}
-                resizeMode="cover"
-                shouldPlay
-                isLooping
-                style={{ width: videoDimensions, height: videoDimensions }}
-              />
-            </View>
-            <Text style={styles.userName}>John Doe</Text>
-            <TouchableOpacity onPress={()=>this.showCam()} style={{width: width-40, height: 80, alignItems: 'center', justifyContent: 'center'}}><View style={this.getButtonStyle()}></View></TouchableOpacity>
-          </View>
-          <View style={styles.miniWrpr}>
-            <View style={styles.videoContainer}>
-              <Video
-                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                rate={1.0}
-                volume={1.0}
-                muted={false}
-                resizeMode="cover"
-                shouldPlay
-                isLooping
-                style={{ width: videoDimensions, height: videoDimensions }}
-              />
-            </View>
-            <Text style={styles.userName}>Jane Doe</Text>
-          </View>
-          <View style={styles.miniWrpr}>
-            <View style={styles.videoContainer}>
-              <Video
-                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                rate={1.0}
-                volume={1.0}
-                muted={false}
-                resizeMode="cover"
-                shouldPlay
-                isLooping
-                style={{ width: videoDimensions, height: videoDimensions }}
-              />
-            </View>
-            <Text style={styles.userName}>Jim Doe</Text>
+            <ScrollView style={{paddingBottom: 40}} showsVerticalScrollIndicator={false}>
+              <View style={styles.videoContainer}>
+                <Video
+                  source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+                  rate={1.0}
+                  volume={1.0}
+                  muted={false}
+                  resizeMode="cover"
+                  shouldPlay
+                  isLooping
+                  style={{ width: videoDimensions, height: videoDimensions }}
+                />
+              </View>
+              <View style={styles.otherDetailWrpr}>
+                <Text style={styles.userName}>John Doe, 26y, BLR</Text>
+              </View>
+              <View style={[styles.controlWrpr, {borderWidth: 1, borderColor: 'transparent', borderTopColor: '#eaeaea', marginTop: 10, marginBottom: 0}]}>
+                <TouchableOpacity onPress={()=>this.showCam()} style={styles.recordWrpr}>
+                  <View style={this.getButtonStyle()}></View>
+                  </TouchableOpacity>
+              </View>
+              <View style={styles.userDetailsWrpr}>
+                <Text style={styles.runningText}>Hello, I am lorem ipsum dolor sit amet. this is my brief bio. To know more, click on record. lorem ipsum dolor sit amet. lorem ipsum. lorem ipsum dolor sit amet. lorem ipsum.</Text>
+              </View>
+            </ScrollView>
           </View>
         </ScrollView>
       )
@@ -139,10 +126,18 @@ export default class App extends React.Component {
             <TouchableOpacity onPress={()=>this.showCam()} style={styles.recordWrpr}>
               <View style={this.getButtonStyle()}></View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>this.uploadVid()} style={styles.backWrpr}>
+            <TouchableOpacity onPress={()=>this.uploadVid()} style={styles.uploadWrpr}>
               <Text style={styles.backText}>UPLOAD</Text>
             </TouchableOpacity>
           </View>
+          <View style={styles.inputWrpr}>
+            <TextInput style={{height: 50, borderColor: 'transparent', borderWidth: 1, width: width - 40, fontSize: 20}} onChangeText={(text) => this.setState({text})} value={this.state.text} />
+          </View>
+          <TouchableOpacity onPress={()=>this.sendMessage()}>
+            <View style={styles.sendWrpr}>
+              <Text style={styles.sendText}>SEND</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       )
     }
@@ -179,6 +174,7 @@ const styles = StyleSheet.create({
     padding: 20,
     width: width, 
     borderWidth: 1,
+    height: height,
     borderColor: '#eaeaea'
   },
   videoContainer:{
@@ -187,14 +183,27 @@ const styles = StyleSheet.create({
     backgroundColor: '#000000',
     marginTop: 25
   },
+  otherDetailWrpr:{
+    width: width - 40,
+    flexDirection: 'row'
+  },
   userName:{
-    fontSize: 40,
+    fontSize: 30,
     color: '#666666'
+  },
+  runningText:{
+    fontSize: 26,
+    color: '#888888'
+  },
+  userDetailsWrpr:{
+    width: width - 40,
+    paddingTop :0,
+    paddingBottom: 30
   },
   vidButton:{
     width: 40,
     height: 40,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#eaeaea',
     borderRadius: 20,
     borderWidth: 2,
     borderColor: 'red'
@@ -210,7 +219,7 @@ const styles = StyleSheet.create({
   vidButtonStop:{
     width: 38,
     height: 38,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#eaeaea',
     borderWidth: 4,
     borderColor: 'red'
   },
@@ -219,21 +228,54 @@ const styles = StyleSheet.create({
     height: 60,
     justifyContent: 'center',
     flexDirection: 'row',
-    alignContent: 'space-between',
-    borderColor: 'red',
-    borderWidth: 1,
-    marginTop: 100
+    alignItems: 'center',
+    marginBottom: 10,
+    marginTop: 20,
+    position: 'relative'
   },
   backWrpr:{
     padding: 10,
     borderWidth: 1,
     borderColor: '#666666',
-    marginBottom: 20
+    marginBottom: 20,
+    position: 'absolute',
+    left: 0,
+    top: 10,
+    width: 100,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  uploadWrpr:{
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#666666',
+    marginBottom: 20,
+    position: 'absolute',
+    right: 0,
+    top: 10,
+    width: 100,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   recordWrpr:{
     width: 50,
     height: 50,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  inputWrpr:{
+    width: width - 40
+  },
+  sendWrpr:{
+    width: width - 40,
+    height: 40,
+    backgroundColor: 'green',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    marginBottom: 30
+  },
+  sendText:{
+    color: '#ffffff'
   },
 });

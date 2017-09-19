@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Sep 19 13:37:40 IST 2017
+#Tue Sep 19 17:26:43 IST 2017
 210.set=ANDROID_RESOURCE
 282.file=/Users/inkoniq/vidApp/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_btn_check_to_on_mtrl_015.png
 14.set=ANDROID_RESOURCE
