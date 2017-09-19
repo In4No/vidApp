@@ -21,6 +21,22 @@ export default class App extends React.Component {
     }
   }
 
+  getRecStyle = () => {
+    if(this.state.captureOn){
+      return styles.camRecording
+    }
+  }
+
+  getRecText = () => {
+    if(this.state.captureOn){
+      return(
+        <View style={styles.recTextWrpr}>
+          <Text style={styles.recText}>REC</Text>
+        </View>
+      )
+    }
+  }
+
   showCam = () => {
     let camstate = this.state.cam
     let captureState = this.state.captureOn
@@ -41,7 +57,7 @@ export default class App extends React.Component {
     if(!camstate){
       this.setState({cam : true})
     }else{
-      this.setState({captureOn : !captureState})
+      this.setState({captureOn : true})
     }
   }
 
@@ -98,7 +114,15 @@ export default class App extends React.Component {
                   </TouchableOpacity>
               </View>
               <View style={styles.userDetailsWrpr}>
-                <Text style={styles.runningText}>Hello, I am lorem ipsum dolor sit amet. this is my brief bio. To know more, click on record. lorem ipsum dolor sit amet. lorem ipsum. lorem ipsum dolor sit amet. lorem ipsum.</Text>
+                <Text style={styles.runningText}>
+                  Hello, I am lorem ipsum dolor sit amet. 
+                  this is my brief bio. To know more, click 
+                  on record. lorem ipsum dolor sit amet. 
+                  lorem ipsum. dolor sit amet. lorem ipsum. 
+                  lorem ipsum dolor sit amet. lorem ipsum.
+                  lorem ipsum dolor sit amet. lorem ipsum.
+                  lorem ipsum dolor sit amet. lorem ipsum.
+                </Text>
               </View>
             </ScrollView>
           </View>
@@ -119,6 +143,8 @@ export default class App extends React.Component {
             totalSeconds={15} 
             >
           </Camera>
+          <View style={this.getRecStyle()}></View>
+          {this.getRecText()}
           <View style={styles.controlWrpr}>
             <TouchableOpacity onPress={()=>this.takeBack()} style={styles.backWrpr}>
               <Text style={styles.backText}>BACK</Text>
@@ -156,15 +182,36 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f7f7f7',
     alignItems: 'center',
     justifyContent: 'flex-start',
+    width: width,
+    height: height
   },
   camWrapper:{
     width: width,
     height: height,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    position: 'relative'
+  },
+  camRecording:{
+    position: 'absolute',
+    top: 14,
+    right: 54,
+    width: 14,
+    height: 14,
+    backgroundColor: 'red',
+    borderRadius: 7
+  },
+  recTextWrpr:{
+    position: 'absolute',
+    top: 10,
+    right: 20
+  },
+  recText:{
+    color: 'red',
+    fontSize: 18
   },
   cameraPreview:{
     width: videoDimensions,
@@ -172,10 +219,8 @@ const styles = StyleSheet.create({
   },
   miniWrpr:{
     padding: 20,
-    width: width, 
-    borderWidth: 1,
+    width: width,
     height: height,
-    borderColor: '#eaeaea'
   },
   videoContainer:{
     width: videoDimensions,
@@ -185,15 +230,19 @@ const styles = StyleSheet.create({
   },
   otherDetailWrpr:{
     width: width - 40,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start'
   },
   userName:{
     fontSize: 30,
-    color: '#666666'
+    color: '#666666',
+    lineHeight: 46
   },
   runningText:{
     fontSize: 26,
-    color: '#888888'
+    color: '#888888',
+    lineHeight: 36
   },
   userDetailsWrpr:{
     width: width - 40,
