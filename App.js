@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, TextI
 import Video from 'react-native-video';
 import Camera from 'react-native-camera';
 import play from './images/play.png';
+import share from './images/share.png';
+import like from './images/like.png';
+import bookmark from './images/bookmark.png';
 import Calendar from 'react-native-calendar';
 // import { Constants, Components } from 'expo';
 // import { Video } from 'expo';
@@ -216,29 +219,46 @@ export default class App extends React.Component {
           <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={true} showsVerticalScrollIndicator={true}>
             <View style={styles.journeyMainPage}>
               <View style={styles.topWrpr}></View>
-              <View style={styles.bottomWrpr}></View>
+              <View style={[styles.bottomWrpr, {backgroundColor: '#ffffff'}]}></View>
             </View>
             <View style={styles.journeyDetailPage}>
               <View style={styles.topWrpr}></View>
               <View style={styles.bottomWrpr}>
                 <View style={[styles.bottomHalfWrpr]}>
                   <Text style={styles.labelText}>START</Text>
-                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{ marginTop: 5}}>
                     <Text style={styles.dateSelection}>{this.getToday()}</Text>
                   </TouchableOpacity>
-                  <Text style={styles.labelText}>FROM</Text>
-                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                  <Text style={[styles.labelText, {marginTop: 20}]}>START TIME</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{marginTop: 5}}>
+                    <Text style={styles.dateSelection}>04:30</Text>
+                  </TouchableOpacity>
+                  <Text style={[styles.labelText, {marginTop: 20}]}>FROM</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{marginTop: 5}}>
                     <Text style={styles.dateSelection}>Bangalore</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={styles.bottomHalfWrpr}>
                   <Text style={styles.labelText}>END</Text>
-                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{marginTop: 5}}>
                     <Text style={styles.dateSelection}>{this.getToday()}</Text>
                   </TouchableOpacity>
-                  <Text style={styles.labelText}>TO</Text>
-                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
-                    <Text style={styles.dateSelection}>MYSORE</Text>
+                  <Text style={[styles.labelText, {marginTop: 20}]}>END TIME</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{marginTop: 5}}>
+                    <Text style={styles.dateSelection}>18:00</Text>
+                  </TouchableOpacity>
+                  <Text style={[styles.labelText, {marginTop: 20}]}>TO</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{marginTop: 5}}>
+                    <Text style={styles.dateSelection}>Mysore</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{position: 'absolute', bottom: 40, right: -10, width: 50, height: 50, alignItems: 'center', justifyContent: 'center'}}>
+                    <Image style={styles.iconsRight} source={share}></Image>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{position: 'absolute', bottom: 100, right: -10, width: 50, height: 50, alignItems: 'center', justifyContent: 'center'}}>
+                    <Image style={styles.iconsRight} source={like}></Image>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{position: 'absolute', bottom: 170, right: -10, width: 50, height: 50, alignItems: 'center', justifyContent: 'center'}}>
+                    <Image style={styles.iconsRight} source={bookmark}></Image>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -280,12 +300,12 @@ const styles = StyleSheet.create({
   },
   topWrpr:{
     width: width,
-    height: height-200,
+    height: height-250,
     backgroundColor: '#f7f7f7'
   },
   bottomWrpr:{
     width: width,
-    height: 200,
+    height: 250,
     borderWidth: 1,
     borderColor: 'transparent',
     borderTopColor: '#666666',
@@ -294,7 +314,13 @@ const styles = StyleSheet.create({
   },
   bottomHalfWrpr:{
     width: '50%',
-    padding: 10
+    padding: 10,
+    position: 'relative'
+  },
+  iconsRight:{
+    width: 25,
+    height: 25,
+    resizeMode: 'contain'
   },
   labelText:{
     color: '#ffffff',
