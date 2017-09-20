@@ -108,12 +108,12 @@
         "source": "/Users/inkoniq/.android/build-cache/7c08f976c7f479a7d63cc8b51e39b7f1a043e50a/output/res/drawable-mdpi/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
-        "merged": "/Users/inkoniq/vidApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/Users/inkoniq/.android/build-cache/7c08f976c7f479a7d63cc8b51e39b7f1a043e50a/output/res/drawable-mdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/inkoniq/vidApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png",
         "source": "/Users/inkoniq/.android/build-cache/7c08f976c7f479a7d63cc8b51e39b7f1a043e50a/output/res/drawable-mdpi/abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/inkoniq/vidApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/inkoniq/.android/build-cache/7c08f976c7f479a7d63cc8b51e39b7f1a043e50a/output/res/drawable-mdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/inkoniq/vidApp/android/app/build/intermediates/res/merged/debug/drawable-mdpi/abc_textfield_search_activated_mtrl_alpha.9.png",

@@ -1,4 +1,4 @@
-#Tue Sep 19 17:26:42 IST 2017
+#Tue Sep 19 19:30:56 IST 2017
 base.0=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/inkoniq/vidApp/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
