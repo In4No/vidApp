@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, TextI
 import Video from 'react-native-video';
 import Camera from 'react-native-camera';
 import play from './images/play.png';
+import Calendar from 'react-native-calendar';
 // import { Constants, Components } from 'expo';
 // import { Video } from 'expo';
 
@@ -13,7 +14,7 @@ let videoDimensions = width - 40
 export default class App extends React.Component {
   constructor(props){
     super(props)
-    console.log("here")
+    console.log("here", Calendar)
     this.state = {
       cam : false,
       vid : false,
@@ -79,6 +80,26 @@ export default class App extends React.Component {
     }else{
       return styles.vidButton
     }
+  }
+
+  formatDate = (date) => {
+    let monthNames = [
+      "January", "February", "March",
+      "April", "May", "June", "July",
+      "August", "September", "October",
+      "November", "December"
+    ];
+
+    let day = date.getDate();
+    let monthIndex = date.getMonth();
+    let year = date.getFullYear();
+
+    return day + ' ' + monthNames[monthIndex] + ' ' + year;
+  }
+
+  getToday = () => {
+    let currentDate = new Date()
+    return this.formatDate(currentDate)
   }
 
   uploadVid = () => {
@@ -194,9 +215,34 @@ export default class App extends React.Component {
         <View style={styles.journeyWrpr}>
           <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={true} showsVerticalScrollIndicator={true}>
             <View style={styles.journeyMainPage}>
+              <View style={styles.topWrpr}></View>
               <View style={styles.bottomWrpr}></View>
             </View>
-            <View style={styles.journeyDetailPage}></View>
+            <View style={styles.journeyDetailPage}>
+              <View style={styles.topWrpr}></View>
+              <View style={styles.bottomWrpr}>
+                <View style={[styles.bottomHalfWrpr]}>
+                  <Text style={styles.labelText}>START</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                    <Text style={styles.dateSelection}>{this.getToday()}</Text>
+                  </TouchableOpacity>
+                  <Text style={styles.labelText}>FROM</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                    <Text style={styles.dateSelection}>Bangalore</Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={styles.bottomHalfWrpr}>
+                  <Text style={styles.labelText}>END</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                    <Text style={styles.dateSelection}>{this.getToday()}</Text>
+                  </TouchableOpacity>
+                  <Text style={styles.labelText}>TO</Text>
+                  <TouchableOpacity onPress={()=>this.getToday()} style={{padding: 10, marginTop: 10, paddingLeft: 0}}>
+                    <Text style={styles.dateSelection}>MYSORE</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
           </ScrollView>
         </View>
       )
@@ -232,15 +278,31 @@ const styles = StyleSheet.create({
     height: height,
     backgroundColor: 'transparent'
   },
+  topWrpr:{
+    width: width,
+    height: height-200,
+    backgroundColor: '#f7f7f7'
+  },
   bottomWrpr:{
     width: width,
     height: 200,
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
     borderWidth: 1,
     borderColor: 'transparent',
-    borderTopColor: '#666666'
+    borderTopColor: '#666666',
+    flexDirection: 'row',
+    padding: 10
+  },
+  bottomHalfWrpr:{
+    width: '50%',
+    padding: 10
+  },
+  labelText:{
+    color: '#ffffff',
+    fontSize: 8
+  },
+  dateSelection:{
+    color: '#f7f7f7',
+    fontSize: 12
   },
   journeyDetailPage:{
     width: width,
