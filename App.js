@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, TextInput } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Dimensions, TouchableOpacity, TextInput, Image } from 'react-native';
 import Video from 'react-native-video';
 import Camera from 'react-native-camera';
+import play from './images/play.png';
 // import { Constants, Components } from 'expo';
 // import { Video } from 'expo';
 
@@ -15,9 +16,12 @@ export default class App extends React.Component {
     console.log("here")
     this.state = {
       cam : false,
+      vid : false,
       captureOn : false,
       capturing : false,
-      text : 'Enter Message'
+      text : 'Enter Message',
+      playVideo : false,
+      journey : true
     }
   }
 
@@ -86,9 +90,22 @@ export default class App extends React.Component {
     console.log("will send message")
   }
 
+  getVidState = () => {
+    if(this.state.playVideo){
+      return false
+    }else{
+      return true
+    }
+  }
+
+  toggleVidState = () => {
+    let videoState = this.state.playVideo
+    this.setState({playVideo : !videoState})
+  }
+
 
   getInner = () => {
-    if(!this.state.cam){
+    if(this.state.vid){
       return(
         <ScrollView horizontal={true} pagingEnabled={true}>
           <View style={styles.miniWrpr}>
@@ -100,7 +117,8 @@ export default class App extends React.Component {
                   volume={1.0}
                   muted={false}
                   resizeMode="cover"
-                  shouldPlay
+                  playInBackground={false}
+                  paused={this.getVidState()}
                   isLooping
                   style={{ width: videoDimensions, height: videoDimensions }}
                 />
@@ -124,11 +142,15 @@ export default class App extends React.Component {
                   lorem ipsum dolor sit amet. lorem ipsum.
                 </Text>
               </View>
+              <TouchableOpacity style={styles.playWrpr} onPress={()=>this.toggleVidState()}>
+                <Image style={styles.playImage} source={play}></Image>
+              </TouchableOpacity>
             </ScrollView>
           </View>
         </ScrollView>
       )
-    }else{
+    }
+    if(this.state.cam){
       return(
         <View style={styles.camWrapper}>
           <Camera
@@ -167,6 +189,18 @@ export default class App extends React.Component {
         </View>
       )
     }
+    if(this.state.journey){
+      return(
+        <View style={styles.journeyWrpr}>
+          <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={true} showsVerticalScrollIndicator={true}>
+            <View style={styles.journeyMainPage}>
+              <View style={styles.bottomWrpr}></View>
+            </View>
+            <View style={styles.journeyDetailPage}></View>
+          </ScrollView>
+        </View>
+      )
+    }
   }
 
   render() {
@@ -187,6 +221,31 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     width: width,
     height: height
+  },
+  journeyWrpr:{
+    backgroundColor: '#383838',
+    width: width,
+    height: height
+  },
+  journeyMainPage:{
+    width: width,
+    height: height,
+    backgroundColor: 'transparent'
+  },
+  bottomWrpr:{
+    width: width,
+    height: 200,
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    borderWidth: 1,
+    borderColor: 'transparent',
+    borderTopColor: '#666666'
+  },
+  journeyDetailPage:{
+    width: width,
+    height: height,
+    backgroundColor: 'transparent'
   },
   camWrapper:{
     width: width,
@@ -226,7 +285,24 @@ const styles = StyleSheet.create({
     width: videoDimensions,
     height: videoDimensions,
     backgroundColor: '#000000',
-    marginTop: 25
+    marginTop: 25,
+  },
+  playWrpr:{
+    position: 'absolute',
+    top: 372,
+    right: 10,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#de9d00',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  playImage:{
+    width: 30,
+    height: 30,
+    resizeMode: 'contain',
+    marginLeft: 6
   },
   otherDetailWrpr:{
     width: width - 40,
